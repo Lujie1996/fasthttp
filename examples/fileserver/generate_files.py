@@ -13,8 +13,8 @@ if __name__ == '__main_':
 	filename_prefix = str(s) + 'mb_'
 	for i in range(n):
 		total_path = path + filename_prefix + str(i)
-	    f = open(total_path, 'wb')
-	    f.seek(s * 1048576)
+		f = open(total_path, 'wb')
+		f.seek(s * 1048576)
 		f.write(b'\0')
 		f.close()
 
