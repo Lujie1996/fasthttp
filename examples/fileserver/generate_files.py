@@ -1,6 +1,7 @@
 import os
 
-if __name__ == '__main_':
+if __name__ == '__main__':
+	print 'start generating random files...'	
 
 	# n = input('Number of files: ')
 	# s = input('File size (MB): ')
@@ -17,5 +18,5 @@ if __name__ == '__main_':
 		f.seek(s * 1048576)
 		f.write(b'\0')
 		f.close()
-
-	print 'created!'
+		print str(i + 1) + ' / ' + str(n) + ' files created..' 
+	print 'Random file generation finished.'
