@@ -11,6 +11,7 @@ if __name__ == '__main__':
 	s = 5
 
 	path = 'static/'
+	os.mkdir(path, 0755);
 	filename_prefix = str(s) + 'mb_'
 	for i in range(n):
 		total_path = path + filename_prefix + str(i)
