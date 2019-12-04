@@ -8,6 +8,6 @@ RUN cd ~ \
     && rm -rvf static \
     && python generate_files.py
 
-EXPOSE 80
+EXPOSE 80 81 82 83 84
 
 ENTRYPOINT [ "./root/fasthttp/examples/fileserver/fileserver", "-addr=0.0.0.0:80", "-dir=/root/fasthttp/examples/fileserver/static"]
