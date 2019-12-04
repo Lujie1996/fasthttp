@@ -23,15 +23,19 @@ if __name__ == '__main__':
 	# n = int(n)
 	# s = int(s)
 	n = 10
-	s = 1
-	size_in_byte = s * 1024 * 1024
 
 	path = 'static/'
 	os.mkdir(path, 0755);
 
-	filename_prefix = str(s) + 'mb_'
-	for i in range(n):
-		total_path = path + filename_prefix + str(i) + ".txt"
-		generate_big_random_letters(total_path, size_in_byte)
-		print str(i + 1) + ' / ' + str(n) + ' files created..' 
-	print 'Random file generation finished.'
+	l = [1, 16, 128, 512, 1024]
+	for s in l:
+		size_in_byte = s * 1024
+
+		
+
+		filename_prefix = str(s) + 'kb_'
+		for i in range(n):
+			total_path = path + filename_prefix + str(i) + ".txt"
+			generate_big_random_letters(total_path, size_in_byte)
+			print str(i + 1) + ' / ' + str(n) + ' files created..' 
+		print 'Random file generation finished.' + str(s) + "kb"
