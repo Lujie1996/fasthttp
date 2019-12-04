@@ -5,6 +5,7 @@ RUN cd ~ \
     && git clone https://github.com/Lujie1996/fasthttp.git \
     && cd fasthttp/examples/fileserver \
     && make \
+    && rm -rvf static
     && python generate_files.py
 
 EXPOSE 80
